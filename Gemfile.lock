@@ -16,7 +16,7 @@ GIT
   tag: v1.7.2
   specs:
     vagrant (1.7.2)
-      bundler (>= 1.5.2, < 1.8.0)
+      bundler (>= 1.5.2)
       childprocess (~> 0.5.0)
       erubis (~> 2.7.0)
       hashicorp-checkpoint (~> 0.1.1)
@@ -35,6 +35,7 @@ GIT
 PATH
   remote: .
   specs:
+    vagrant-cachier (1.2.2)
 
 GEM
   remote: https://rubygems.org/
@@ -127,4 +128,4 @@ DEPENDENCIES
   vagrant-pristine!
 
 BUNDLED WITH
-   1.10.4
+   1.12.5

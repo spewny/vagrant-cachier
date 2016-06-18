@@ -40,7 +40,7 @@ module VagrantPlugins
         require_relative 'cap/linux/pip_cache_dir'
         Cap::Linux::PipCacheDir
       end
-      
+
       guest_capability 'debian', 'apt_cache_dir' do
         require_relative 'cap/debian/apt_cache_dir'
         Cap::Debian::AptCacheDir
@@ -59,6 +59,15 @@ module VagrantPlugins
       guest_capability 'redhat', 'yum_cache_dir' do
         require_relative 'cap/redhat/yum_cache_dir'
         Cap::RedHat::YumCacheDir
+      end
+
+      guest_capability 'fedora', 'yum_cache_dir' do
+        # Disable Yum on fedora guests
+      end
+
+      guest_capability 'fedora', 'dnf_cache_dir' do
+        require_relative 'cap/fedora/dnf_cache_dir'
+        Cap::Fedora::DnfCacheDir
       end
 
       guest_capability 'suse', 'yum_cache_dir' do
